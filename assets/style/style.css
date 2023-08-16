@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table{
+    border: 2px solid rgba(224, 220, 220, 0.774);
+    padding-top: 20px;
+    
+}
+td, th{
+    border-bottom: 2px solid rgba(224, 220, 220, 0.774);
+    padding: 8px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+<form action="{% url "home:serachuser" %}" method="get">
+
+    {{ forms }}
+</form>
+    <div class="main">
+        <table style="width: 90%; text-align: center; margin: 20px auto;">
+            <tr>
+                <th>S.NO.</th>
+                <th>NAME</th>
+                <th>ID</th>
+                <th>PHONE</th>
+                <th>WORKING STATUS</th>
+                <th>DEPARTMENT</th>
+                <th>ADDRESS</th>
+            </tr>
+            {% for user in ls_user %}
+                <tr>
+                <td>1</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.id }}</td>
+                <td>{{ user.phone_number1 }}</td>
+                <td>true</td>
+                <td>{{ user.office }}</td>
+                <td>tehran</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+        
+    </div>
+</body>
+</html>
